@@ -5,7 +5,77 @@ Enables the user to find the country, region, city, coordinates, zip code, time 
 # Installation
 
 ## R Package
+1. Launch RStudio IDE.
+2. Make sure *devtools* is installed on your local machine. At the console window, run `install.packages("devtools")`
+3. Load *devtools* `require(devtools)`
+4. Install the package `install_github("ip2location/ip2location-r")`
+5. Call the open() and get_all() function to open and get all the information about the IP address
+```
+> ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
+> ip2location::get_all("8.8.8.8")
+$ip
+[1] "8.8.8.8"
 
+$country_short
+[1] "US"
+
+$country_long
+[1] "United States"
+
+$region
+[1] "California"
+
+$city
+[1] "Mountain View"
+
+$isp
+[1] "Google LLC"
+
+$latitude
+[1] 37.40599
+
+$longitude
+[1] -122.0785
+
+$domain
+[1] "google.com"
+
+$zipcode
+[1] "94043"
+
+$timezone
+[1] "-07:00"
+
+$netspeed
+[1] "T1"
+
+$idd_code
+[1] "1"
+
+$area_code
+[1] "650"
+
+$weather_code
+[1] "USCA0746"
+
+$weather_name
+[1] "Mountain View"
+
+$mcc
+[1] "-"
+
+$mnc
+[1] "-"
+
+$mobile_brand
+[1] "-"
+
+$elevation
+[1] "32"
+
+$usage_type
+[1] "DCH"
+```
 
 
 ## IP2Location Python Module
