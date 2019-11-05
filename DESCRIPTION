@@ -11,7 +11,7 @@ URL: https://github.com/ip2location/ip2location-r
 Encoding: UTF-8
 Depends: R (>= 3.2.3)
 SystemRequirements: IP2Location Python library
-        <https://www.ip2location.com/development-libraries/ip2location/python>.
+        <https://www.ip2location.com/development-libraries/ip2location/python>
 Imports: reticulate (>= 1.13), stringr (>= 1.4.0), jsonlite (>= 1.6)
 RoxygenNote: 6.1.1
 NeedsCompilation: no
