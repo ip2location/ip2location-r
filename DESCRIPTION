@@ -1,0 +1,17 @@
+Package: ip2location
+Title: Lookup for IP Address Information. Supported IPv4 and IPv6
+Version: 8.0.0
+Author: Chris Lim
+Maintainer: Chris Lim <chris@ip2location.com>
+Description: Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage types, etc that any IP address or hostname originates from.
+        Please visit <https://www.ip2location.com> to learn more. You may also want to visit <https://lite.ip2location.com> for free database download.
+        This package requires 'IP2Location Python' module. At the terminal,please run 'pip install IP2Location' to install the module.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.2.3)
+SystemRequirements: IP2Location Python library
+        <https://www.ip2location.com/development-libraries/ip2location/python>.
+Imports: reticulate (>= 1.13), stringr (>= 1.4.0), jsonlite (>= 1.6)
+RoxygenNote: 6.1.1
+NeedsCompilation: no
+Packaged: 2019-11-05 03:10:55 UTC; Chris
