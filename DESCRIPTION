@@ -7,6 +7,7 @@ Description: Enables the user to find the country, region, city, coordinates, zi
         Please visit <https://www.ip2location.com> to learn more. You may also want to visit <https://lite.ip2location.com> for free database download.
         This package requires 'IP2Location Python' module. At the terminal,please run 'pip install IP2Location' to install the module.
 License: MIT + file LICENSE
+URL: https://github.com/ip2location/ip2location-r
 Encoding: UTF-8
 Depends: R (>= 3.2.3)
 SystemRequirements: IP2Location Python library
