@@ -1,6 +1,6 @@
 # Description
 
-Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage types, etc that any IP address or hostname originates from.
+Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or hostname originates from.
 
 # Installation
 
@@ -74,7 +74,13 @@ $elevation
 [1] "32"
 
 $usage_type
-[1] "DCH"
+[1] "SES"
+
+$address_type
+[1] "A"
+
+$category
+[1] "IAB19"
 ```
 
 
