@@ -89,7 +89,8 @@ $category
 > ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
 > ip2location::plot_map(c('8.8.8.8','8.8.6.6'))
 ```
-
+Your output will be like this:
+![Rplot_ipl_1](https://user-images.githubusercontent.com/6367210/211713676-ca00ca56-6f71-460d-9358-100d82049cef.png)
 
 ## IP2Location Python Module
 This R package leverage the IP2Location Python library for geolocation lookup. Hence, you will need to install the `Python` and `IP2Location` module before using this R package. It works in both Windows and Linux environment, and below is the installation command.
