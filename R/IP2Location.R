@@ -1,11 +1,11 @@
 #' @title Load IP2Location BIN data
 #'
-#' @description Load the IP2Locaiton BIN data for lookup. Free IP2Location LITE data available for download at <https://lite.ip2location.com/>
+#' @description Load the IP2Location BIN data for lookup. Free IP2Location LITE data available for download at <https://lite.ip2location.com/>
 #' @param bin_location Absolute path of IP2Location BIN data
 #' @return NULL
 #' @import reticulate
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' open("~/IP-COUNTRY.BIN")
 #' }
 #'
@@ -19,13 +19,13 @@ open <- function(bin_location){
 
 #' @title Lookup for IP address information
 #'
-#' @description Find the country, region, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage types, etc that any IP address or host name originates from. The return values will be depending on the BIN data loaded.
+#' @description Find the country, region, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or host name originates from. The return values will be depending on the BIN data loaded.
 #' @param ip IPv4 or IPv6 address
 #' @return Return all information about the IP address
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' get_all("8.8.8.8")
 #' }
 #'

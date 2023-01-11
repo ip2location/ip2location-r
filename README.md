@@ -9,7 +9,9 @@ Enables the user to find the country, region, city, coordinates, zip code, time 
 2. Make sure *devtools* is installed on your local machine. At the console window, run `install.packages("devtools")`
 3. Load *devtools* `require(devtools)`
 4. Install the package `install_github("ip2location/ip2location-r")`
-5. Call the open() and get_all() function to open and get all the information about the IP address
+
+# Usage
+1. Call the open() and get_all() function to open and get all the information about the IP address
 ```
 > ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
 > ip2location::get_all("8.8.8.8")
@@ -81,6 +83,11 @@ $address_type
 
 $category
 [1] "IAB19"
+```
+2 Call the open() and plot_map() function to plot IP addresses on the map
+```
+> ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
+> ip2location::plot_map(c('8.8.8.8','8.8.6.6'))
 ```
 
 

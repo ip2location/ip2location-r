@@ -10,10 +10,10 @@ open(bin_location)
 \item{bin_location}{Absolute path of IP2Location BIN data}
 }
 \description{
-Load the IP2Locaiton BIN data for lookup. Free IP2Location LITE data available for download at <https://lite.ip2location.com/>
+Load the IP2Location BIN data for lookup. Free IP2Location LITE data available for download at <https://lite.ip2location.com/>
 }
 \examples{
-\donttest{
+\dontrun{
 open("~/IP-COUNTRY.BIN")
 }
 
