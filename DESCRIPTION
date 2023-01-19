@@ -1,6 +1,6 @@
 Package: ip2location
 Title: Lookup for IP Address Information
-Version: 8.1.0
+Version: 8.1.1
 Author: IP2Location
 Maintainer: IP2Location <support@ip2location.com>
 Description: Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or hostname originates from. Supported IPv4 and IPv6.
@@ -12,7 +12,7 @@ Encoding: UTF-8
 Depends: R (>= 3.2.3)
 SystemRequirements: IP2Location Python library
         <https://www.ip2location.com/development-libraries/ip2location/python>
-Imports: reticulate (>= 1.13), jsonlite (>= 1.6), dtables (>= 0.2), ggplot2 (>= 3.4), maps (>= 3.4.1), scales (>= 1.2.1)
+Imports: reticulate (>= 1.13), jsonlite (>= 1.6), ggplot2 (>= 3.4), maps (>= 3.4.1), scales (>= 1.2.1)
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2021-06-03 06:05:38 UTC; COMFORT
+Packaged: 2023-01-19 07:03:38 UTC; COMFORT

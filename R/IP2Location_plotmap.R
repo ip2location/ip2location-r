@@ -1,3 +1,5 @@
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("long", "lat", "group", "prop"))
+
 #' @title Plot map using IP2Location data.
 #'
 #' @description Plot the country on the map based on IP addresses and its IP2Location country data.
@@ -6,15 +8,12 @@
 #' @import maps
 #' @import ggplot2
 #' @import scales
-#' @import dtables
 #' @import utils
 #' @export
 #' @examples \dontrun{
 #' plot_map(c("8.8.8.8", "8.8.6.6"))
 #' }
 #'
-
-if(getRversion() >= "2.15.1")  utils::globalVariables(c("long", "lat", "group", "prop"))
 
 plot_map <- function(ips){
   countries = c()
@@ -23,8 +22,29 @@ plot_map <- function(ips){
     result = ip2location::get_all(i)
     countries = append(countries, toString(result["country_long"]))
   }
-  ipData = dft(countries, perc = F)
+
+  country_table    <- table(countries)
+  ipData  <- data.frame(country_table)
+
+  variable1 = deparse(substitute(countries))
+  variable1 = strsplit(variable1, "\\$")[[1]][2]
+
+  if(ncol(ipData) == 2) {
+    names(ipData) <- c(variable1, "n")
+  } else if(ncol(ipData) > 2){
+    names(ipData)[length(ipData)] <- "n"
+  }
+
+  prop <- as.vector(country_table)/sum(country_table)
+  ipData  <- data.frame(ipData, prop)
+
+  table.prop <- as.vector(country_table)/sum(country_table)
+  table.perc <- format(round(table.prop*100, 1), nsmall = 1)
+  table.perc <- gsub("$", "%", table.perc)
+  ipData <- data.frame(ipData, table.perc)
+
   names(ipData)[1] = "group"
+
   data <- read.csv("inst/countrynames_mapping.txt", header=TRUE)
 
   data$matched_country_name[data$matched_country_name == ''] <- NA
@@ -36,6 +56,8 @@ plot_map <- function(ips){
       ipData[, "group"] <- gsub(old.name, new.name, ipData[, "group"])
     }
   }
+
+  print(ipData)
 
   worldMapIPs <- merge(mapData, ipData, by.x = "region", by.y = "group", all.x = TRUE)
   worldMapIPs <- worldMapIPs[order(worldMapIPs[, "order"]), ]
