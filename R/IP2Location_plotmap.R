@@ -45,7 +45,10 @@ plot_map <- function(ips){
 
   names(ipData)[1] = "group"
 
-  data <- read.csv("inst/countrynames_mapping.txt", header=TRUE)
+  path = find.package("ip2location")
+
+  #data <- read.csv("inst\\countrynames_mapping.txt", header=TRUE)
+  data <- read.csv(paste(path, '/countrynames_mapping.txt', sep = ""), header=TRUE)
 
   data$matched_country_name[data$matched_country_name == ''] <- NA
 
@@ -56,8 +59,6 @@ plot_map <- function(ips){
       ipData[, "group"] <- gsub(old.name, new.name, ipData[, "group"])
     }
   }
-
-  print(ipData)
 
   worldMapIPs <- merge(mapData, ipData, by.x = "region", by.y = "group", all.x = TRUE)
   worldMapIPs <- worldMapIPs[order(worldMapIPs[, "order"]), ]
