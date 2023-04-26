@@ -19,7 +19,7 @@ open <- function(bin_location){
 
 #' @title Lookup for IP address information
 #'
-#' @description Find the country, region, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or host name originates from. The return values will be depending on the BIN data loaded.
+#' @description Find the country, region, district, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type, IAB category and ASN that any IP address or host name originates from. The return values will be depending on the BIN data loaded.
 #' @param ip IPv4 or IPv6 address
 #' @return Return all information about the IP address
 #' @import reticulate

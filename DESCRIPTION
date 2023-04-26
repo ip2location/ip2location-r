@@ -1,9 +1,12 @@
 Package: ip2location
 Title: Lookup for IP Address Information
-Version: 8.1.2
-Author: IP2Location
-Maintainer: IP2Location <support@ip2location.com>
-Description: Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or hostname originates from. Supported IPv4 and IPv6.
+Version: 8.1.3
+Authors@R: c(person("Kai Wen", "Ooi", role = c("aut", "cre"),
+                     email = "support@ip2location.com"),
+              person("IP2Location", role = "cph"))
+Author: Kai Wen Ooi
+Maintainer: Kai Wen Ooi <support@ip2location.com>
+Description: Enables the user to find the country, region, district, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather, MCC, MNC, mobile brand name, elevation, usage type, address type, IAB category and ASN that any IP address or hostname originates from. Supported IPv4 and IPv6.
         Please visit <https://www.ip2location.com> to learn more. You may also want to visit <https://lite.ip2location.com> for free database download.
         This package requires 'IP2Location Python' module. At the terminal, please run 'pip install IP2Location' to install the module.
 License: MIT + file LICENSE
@@ -15,4 +18,4 @@ SystemRequirements: IP2Location Python library
 Imports: reticulate (>= 1.13), jsonlite (>= 1.6), ggplot2 (>= 3.4), maps (>= 3.4.1), scales (>= 1.2.1)
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-02-01 03:30:00 UTC; COMFORT
+Packaged: 2023-04-19 07:20:00 UTC; COMFORT

@@ -1,6 +1,6 @@
 # Description
 
-Enables the user to find the country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather station code, weather station name, mobile, usage type, address type and IAB category that any IP address or hostname originates from.
+Enables the user to find the country, region, district, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type, IAB category and ASN that any IP address or hostname originates from.
 
 # Installation
 
@@ -83,14 +83,22 @@ $address_type
 
 $category
 [1] "IAB19"
+
+$district
+[1] "San Diego County"
+
+$asn
+[1] "15169"
+
+$as_name
+[1] "Google LLC"
 ```
 2 Call the open() and plot_map() function to plot IP addresses on the map
 ```
 > ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
 > ip2location::plot_map(c('8.8.8.8','8.8.6.6'))
 ```
-Your output will be like this:
-![Rplot_ipl_1](https://user-images.githubusercontent.com/6367210/211713676-ca00ca56-6f71-460d-9358-100d82049cef.png)
+
 
 ## IP2Location Python Module
 This R package leverage the IP2Location Python library for geolocation lookup. Hence, you will need to install the `Python` and `IP2Location` module before using this R package. It works in both Windows and Linux environment, and below is the installation command.
