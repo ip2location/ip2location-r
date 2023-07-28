@@ -1,103 +1,10 @@
-# Description
+# IP2Location R
+## Description
 
 Enables the user to find the country, region, district, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type, IAB category and ASN that any IP address or hostname originates from.
 
-# Installation
-
-## R Package
-1. Launch RStudio IDE.
-2. Make sure *devtools* is installed on your local machine. At the console window, run `install.packages("devtools")`
-3. Load *devtools* `require(devtools)`
-4. Install the package `install_github("ip2location/ip2location-r")`
-
-# Usage
-1. Call the open() and get_all() function to open and get all the information about the IP address
-```
-> ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
-> ip2location::get_all("8.8.8.8")
-$ip
-[1] "8.8.8.8"
-
-$country_short
-[1] "US"
-
-$country_long
-[1] "United States"
-
-$region
-[1] "California"
-
-$city
-[1] "Mountain View"
-
-$isp
-[1] "Google LLC"
-
-$latitude
-[1] 37.40599
-
-$longitude
-[1] -122.0785
-
-$domain
-[1] "google.com"
-
-$zipcode
-[1] "94043"
-
-$timezone
-[1] "-07:00"
-
-$netspeed
-[1] "T1"
-
-$idd_code
-[1] "1"
-
-$area_code
-[1] "650"
-
-$weather_code
-[1] "USCA0746"
-
-$weather_name
-[1] "Mountain View"
-
-$mcc
-[1] "-"
-
-$mnc
-[1] "-"
-
-$mobile_brand
-[1] "-"
-
-$elevation
-[1] "32"
-
-$usage_type
-[1] "SES"
-
-$address_type
-[1] "A"
-
-$category
-[1] "IAB19"
-
-$district
-[1] "San Diego County"
-
-$asn
-[1] "15169"
-
-$as_name
-[1] "Google LLC"
-```
-2 Call the open() and plot_map() function to plot IP addresses on the map
-```
-> ip2location::open("~/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE-SAMPLE.BIN")
-> ip2location::plot_map(c('8.8.8.8','8.8.6.6'))
-```
+## Developer Documentation
+To learn more about installation, usage, and code examples, please visit the developer documentation at [https://ip2location-python.readthedocs.io/en/latest/index.html.](https://ip2location-r.readthedocs.io/en/latest/index.html)
 
 
 ## IP2Location Python Module
