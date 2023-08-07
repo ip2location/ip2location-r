@@ -4,7 +4,7 @@
 Enables the user to find the country, region, district, city, coordinates, zip code, ISP, domain name, timezone, connection speed, IDD code, area code, weather station code, weather station name, mobile, usage type, address type, IAB category and ASN that any IP address or hostname originates from.
 
 ## Developer Documentation
-To learn more about installation, usage, and code examples, please visit the developer documentation at [https://ip2location-python.readthedocs.io/en/latest/index.html.](https://ip2location-r.readthedocs.io/en/latest/index.html)
+To learn more about installation, usage, and code examples, please visit the developer documentation at [https://ip2location-r.readthedocs.io/en/latest/index.html.](https://ip2location-r.readthedocs.io/en/latest/index.html)
 
 
 ## IP2Location Python Module
