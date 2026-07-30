@@ -1,6 +1,6 @@
 Package: ip2location
 Title: Lookup for IP Address Information
-Version: 8.1.3
+Version: 8.1.4
 Authors@R: c(person("Kai Wen", "Ooi", role = c("aut", "cre"),
                      email = "support@ip2location.com"),
               person("IP2Location", role = "cph"))

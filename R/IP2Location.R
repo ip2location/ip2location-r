@@ -1,3 +1,5 @@
+.ip2location_env <- new.env(parent = emptyenv())
+
 #' @title Load IP2Location BIN data
 #'
 #' @description Load the IP2Location BIN data for lookup. Free IP2Location LITE data available for download at <https://lite.ip2location.com/>
@@ -11,10 +13,24 @@
 #'
 
 open <- function(bin_location){
-  py_run_string("import IP2Location")
-  py_run_string("import json")
-  path = paste("data = IP2Location.IP2Location('", bin_location , "')", sep = "")
-  py_run_string(path)
+  .ip2location_env$IP2Location <- reticulate::import("IP2Location")
+  .ip2location_env$data <- .ip2location_env$IP2Location$IP2Location(bin_location)
+  invisible(NULL)
+}
+
+#' @title Get the current IP2Location BIN data object
+#'
+#' @description Retrieve the Python IP2Location object created by \code{open()}. Internal helper used by the lookup functions to ensure the BIN data has been loaded before making a request.
+#' @return Return the Python IP2Location data object used for lookups
+#' @keywords internal
+#' @noRd
+#'
+
+.getData <- function() {
+  if (is.null(.ip2location_env$data)) {
+    stop("BIN data not loaded. Please call open() first.")
+  }
+  .ip2location_env$data
 }
 
 #' @title Lookup for IP address information
@@ -23,7 +39,6 @@ open <- function(bin_location){
 #' @param ip IPv4 or IPv6 address
 #' @return Return all information about the IP address
 #' @import reticulate
-#' @import jsonlite
 #' @export
 #' @examples \dontrun{
 #' get_all("8.8.8.8")
@@ -31,9 +46,8 @@ open <- function(bin_location){
 #'
 
 get_all <- function(ip){
-  address = paste("rec = data.get_all('", ip, "')", sep = "")
-  py_run_string(address)
-  py_run_string("j = json.dumps(rec.__dict__)")
-  result = fromJSON(py$j)
+  data <- .getData()
+  rec <- data$get_all(ip)
+  result <- reticulate::py_to_r(rec$`__dict__`)
   return(result)
 }
